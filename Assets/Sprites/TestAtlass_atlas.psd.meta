@@ -14,10 +14,12 @@ TextureImporter:
     21300018: "TestAtlass.\u041F\u0440\u0438\u0432\u0435\u0442"
     21300020: "TestAtlass.\u041C\u043D\u043E\u0433\u043E\u0443\u0433\u043E\u043B\u044C\u043D\u0438\u043A
       1"
+    21300022: TestAtlass.Hello
+    21300024: TestAtlass.Hyllo
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -34,10 +36,10 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 512
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 2
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -58,113 +60,113 @@ TextureImporter:
     - name: TestAtlass.1
       rect:
         serializedVersion: 2
-        x: 142
-        y: 254
+        x: 4
+        y: 13
         width: 136
         height: 133
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TestAtlass.1 invert
       rect:
         serializedVersion: 2
-        x: 298
-        y: 414
+        x: 270
+        y: 157
         width: 75
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TestAtlass.2
       rect:
         serializedVersion: 2
-        x: 3
-        y: 254
+        x: 143
+        y: 13
         width: 136
         height: 133
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TestAtlass.3
       rect:
         serializedVersion: 2
         x: 3
-        y: 422
+        y: 166
         width: 158
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TestAtlass.Red
       rect:
         serializedVersion: 2
-        x: 399
-        y: 255
+        x: 404
+        y: 16
         width: 106
         height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .158781812, y: .818713248}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TestAtlass.Green
       rect:
         serializedVersion: 2
-        x: 398
-        y: 398
+        x: 348
+        y: 149
         width: 106
         height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .821720064, y: .137825653}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TestAtlass.Blue
       rect:
         serializedVersion: 2
-        x: 340
-        y: 255
+        x: 453
+        y: 140
         width: 57
         height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .191791728, y: .179288134}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TestAtlass.Ceane
       rect:
         serializedVersion: 2
-        x: 281
-        y: 255
+        x: 454
+        y: 198
         width: 57
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TestAtlass.Yellow
       rect:
         serializedVersion: 2
-        x: 174
-        y: 399
+        x: 163
+        y: 152
         width: 105
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .82970506, y: .824783921}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: "TestAtlass.\u041F\u0440\u0438\u0432\u0435\u0442"
+    - name: TestAtlass.Hyllo
       rect:
         serializedVersion: 2
-        x: 3
-        y: 200
-        width: 176
-        height: 48
+        x: 283
+        y: 2
+        width: 119
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: "TestAtlass.\u041C\u043D\u043E\u0433\u043E\u0443\u0433\u043E\u043B\u044C\u043D\u0438\u043A
         1"
       rect:
         serializedVersion: 2
-        x: 7
-        y: 62
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 293
+        y: 59
+        width: 89
+        height: 89
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

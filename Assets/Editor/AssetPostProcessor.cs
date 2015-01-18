@@ -9,7 +9,7 @@ public class AssetPostProcessor : AssetPostprocessor
     void OnPostprocessTexture(Texture2D text)
     {
         ///Load PSD
-        if (assetPath.ToUpper().EndsWith("ATLAS.PSD"))
+        if (assetPath.ToLower().EndsWith(PSDUtils.psdImportSettings.psdSuffix + ".psd"))
         {
             PsdFile psd = PSDUtils.ImportPSD(assetPath);
             if (psd != null) PSDUtils.CreatSpriteFromLayers(psd, assetImporter);

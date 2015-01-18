@@ -14,6 +14,30 @@ namespace Ingame.PSD
     /// </summary>
     public static class PSDUtils
     {
+        public static PSDImportSetting psdImportSettings
+        {
+            get
+            {
+                PSDImportSetting temp;
+                string path = "Assets/Editor/Ingame/PSDImportSetting.asset";
+                temp = AssetDatabase.LoadAssetAtPath(path, typeof(PSDImportSetting)) as PSDImportSetting;
+                if (temp == null)
+                {
+                    temp = ScriptableObject.CreateInstance<PSDImportSetting>();
+                    AssetDatabase.CreateAsset(temp, path);
+                    //AssetDatabase.SaveAssets();
+                }
+                return temp;
+            }
+        }
+
+        [MenuItem("Window/PSD Import Settings")]
+        public static void GetPSDImportSettingAsset()
+        {
+            EditorUtility.FocusProjectWindow();
+            Selection.activeObject = psdImportSettings;
+        }
+
         /// <summary>
         /// Load PSD file
         /// </summary>
@@ -33,13 +57,17 @@ namespace Ingame.PSD
         {
             TextureImporter texImp = importer as TextureImporter;
             string name = Path.GetFileNameWithoutExtension(importer.assetPath);
-            name = name.Replace("_atlas", "");
+            name = name.Replace("_"+ psdImportSettings.psdSuffix, "");
             SpriteMetaData[] tmpMeta = texImp.spritesheet;
             List<SpriteMetaData> sprMeta = new List<SpriteMetaData>();
             texImp.textureType = TextureImporterType.Sprite;
             texImp.spriteImportMode = SpriteImportMode.Multiple;
-            texImp.spritePixelsPerUnit = 100;
-            texImp.spritePackingTag = null;
+            
+            //texImp.spritePixelsPerUnit = 100;
+            //texImp.spritePackingTag = null;
+            //texImp.anisoLevel = 1;
+            //texImp.wrapMode = TextureWrapMode.Repeat;
+            //texImp.filterMode = FilterMode.Bilinear;
 
             foreach (Layer layer in psd.Layers)
             {
@@ -69,7 +97,6 @@ namespace Ingame.PSD
                     sprMeta.Add(smd);
                 }
             }
-
             texImp.spritesheet = sprMeta.ToArray();
         }
     }
