@@ -71,17 +71,6 @@ namespace Ingame.PSD
             }
 
             texImp.spritesheet = sprMeta.ToArray();
-            //AssetDatabase.Refresh();
-            //AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
-        }
-
-        private static SpriteMetaData GetSpriteMetaByName(SpriteMetaData[] metas, string name)
-        {
-            foreach (SpriteMetaData meta in metas)
-            {
-                if (meta.name == name) return meta;
-            }
-            return new SpriteMetaData();
         }
     }
 }
